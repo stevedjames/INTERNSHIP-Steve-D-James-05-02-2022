@@ -1,0 +1,38 @@
+ <!-- form handling -->
+ <form action="/add-student" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Mark Adreis">
+        </div>
+        <div class="form-group">
+            <label for="roll" class="text-light">Roll No: </label>
+            <input type="number" name="roll" value="" placeholder="Enter your roll number">
+        </div>
+        <div class="form-group">
+            <label for="mobile" class="text-light">Phone No: </label>
+            <input type="text" name="mobile" value="" placeholder="Enter your phone number">
+            <!-- <input type="text" name="mobile" value="" placeholder="Enter your phone number" title="Should Contain 10 digits" pattern="/^(0|[+91]{3})?([7-9][0-9]{9})$/"> -->
+        </div>
+        <div class="form-group">
+            <label for="standard" class="text-light">Standard </label>
+            <input type="Number" name="standard" value="" placeholder="Standard" >
+        </div>
+        <div class="form-group">
+            <label for="division" class="text-light">Division </label>
+            <input type="search"  name="division" value="" placeholder="Division" >
+            <!-- <datalist id="division">
+                <% for(var i = 0; i < data.length; i++) { %>
+                <option value="<%= data[i].division %>"><%= data[i].division %></option>
+                <% } %>
+             </datalist> -->
+        </div>
+        
+         
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

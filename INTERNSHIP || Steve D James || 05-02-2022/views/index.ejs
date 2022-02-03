@@ -1,0 +1,66 @@
+
+<!-- include header -->
+<%- include('includes/_header') %>
+<!-- /include header -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Main Site -->
+    <main id="site-main">
+        
+        <div class="container" >
+            <div class="box-nav d-flex justify-between" style="float:left; padding-left:10em;">
+                <a href="/" class="border-shadow">
+                    <span class="text-gradient">Home <i class="fas fa-house-user"></i></span>
+                </a>
+            </div>
+            <div class="box-nav d-flex justify-between" style="float:left; padding-left:2em;">
+                <a href="/add-student" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+            <div class="box-nav d-flex justify-between " style="float:left; padding-left:2em;">
+                <a href="/register" class="border-shadow">
+                    <span class="text-gradient">Register new class <i class="fas fa-user-plus"></i></span>
+                </a>
+            </div>
+            <div class="box-nav d-flex justify-between" style="float:left; padding-left:2em;">
+                <a href="/view-classes" class="border-shadow">
+                    <span class="text-gradient">View all classes <i class="fas fa-eye"></i></span>
+                </a>
+            </div>
+<br><br><br>
+<h2 style="text-align: center;"><%= title %></h2>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Roll No:</th>
+                            <th>Phone </th>
+                            <th>Standard</th>
+                            <th>Division</th>
+                            <th><a class="btn update">
+                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a class="btn delete" style = "padding-left: 3em;" >
+                                <span class="text-gradient"><i class="fas fa-times"></i></span>
+                            </a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('includes/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('includes/_footer') %>
+<!-- /include footer -->
